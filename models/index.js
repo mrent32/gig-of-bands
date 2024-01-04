@@ -3,12 +3,19 @@ const Venues = require('./Venues');
 const Gigs = require('./Gigs');
 
 Bands.hasMany(Gigs, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE' 
+  foreignKey: 'band_id'
 });
 
-Gigs.belongsTo(Bands, {
-  foreignKey: 'user_id'
+Venues.hasMany(Gigs, {
+  foreignKey: 'venue_id'
 });
+
+Gigs.hasOne(Bands, {
+  foreignKey: 'id'
+})
+
+Gigs.hasOne(Venues, {
+  foreignKey: 'id'
+})
 
 module.exports = { Bands, Gigs, Venues };
