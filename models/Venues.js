@@ -20,13 +20,13 @@ class Venues extends Model {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      email: {
+      date: {
+        type: DataTypes.DATE,
+        allowNull: false
+      },
+      username: {
         type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-          isEmail: true,
-        },
+        allowNull: false
       },
       password: {
         type: DataTypes.STRING,

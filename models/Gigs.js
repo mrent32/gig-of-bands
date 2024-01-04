@@ -11,26 +11,34 @@ Gigs.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-    },
-    date_created: {
+    gig_date: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    band_name: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    band_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'bands',
+        key: 'id',
+      },
     },
-    user_id: {
+    venue_name: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    venue_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'venues',
         key: 'id',
       },
     },

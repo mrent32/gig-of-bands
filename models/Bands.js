@@ -20,13 +20,13 @@ Bands.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    genre: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
+    },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     password: {
       type: DataTypes.STRING,
