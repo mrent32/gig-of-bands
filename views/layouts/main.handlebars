@@ -4,41 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Gigs for Bands</title>
+  <link rel="stylesheet" href="./public/css/style.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
+    <header class="">
+        <h1>GigsforBands</h1>
+        <nav>
+        <a href="/profile">Bands</a>
+        <a href="/profile">Venues</a>
+        <a href="/profile">Events</a>
+        <!-- <button class="" id="logout">logout</button> -->
         <a href="/login">login</a>
-        {{/if}}
-      </nav>
+        </nav>
     </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+    <main>
+        <div class="hero">
+            <img>
+            <h2>Hero Message</h2>
+        </div>
+
+        <div class="categories">
+            <div class="container">
+                <img src="./public/images/band.jpg" class="homepage-img">
+                <h2 class="image-title">Performers</h2>
+            </div>
+
+            <div class="container">
+                <img src="./public/images/venue.jpg" class="homepage-img">
+                <h2 class="image-title">Venues</h2>
+            </div>
+        </div>
+
+        <div class="event-list">
+            <h2>Events:</h2>
+            {{body}}
+        </div>
+    </main>
+
+    <footer></footer>
 </body>
 
 </html>
