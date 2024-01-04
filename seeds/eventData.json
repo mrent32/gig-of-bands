@@ -1,0 +1,14 @@
+[
+  {
+    "band_id": 1,
+    "venue_id": 2
+  },
+  {
+    "band_id": 2,
+    "venue_id": 1
+  },
+  {
+    "band_id": 1,
+    "venue_id": 3
+  }
+]
