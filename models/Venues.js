@@ -35,6 +35,10 @@ class Venues extends Model {
           len: [8],
         },
       },
+      pay: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+      }
     },
     {
       hooks: {
