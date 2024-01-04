@@ -4,7 +4,7 @@ const Gigs = require('./Gigs');
 
 Bands.hasMany(Gigs, {
   foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+  onDelete: 'CASCADE' 
 });
 
 Gigs.belongsTo(Bands, {
