@@ -1,23 +1,23 @@
 const router = require('express').Router();
-const { Gigs, Bands } = require('../models');
+const { Gigs, Bands, Venues } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const gigData = await Gigs.findAll()
+    const gigData = await Gigs.findAll({
+      include: [{ model: Bands, attributes: { exclude: ['username', 'password']} }, { model: Venues, attributes: { exclude: ['username', 'password']} }]
+    })
 
-    // Serialize data so the template can read it
-    const events = gigData.map((gig) => gig.get({ plain: true }));
+    const events = gigData.map((gig) => gig.get({ plain: true }))
+    console.log(events)
 
-    // Pass serialized data and session flag into template
     res.render('homepage', { 
       events
-    });
+    })
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err)
   }
-});
+})
 
 router.get('/project/:id', async (req, res) => {
   try {

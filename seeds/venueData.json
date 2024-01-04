@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Venue Name",
+    "date": "2023-02-08 12:00:00",
+    "username": "username",
+    "password": "password"
+  },
+  {
+    "name": "Venue Name 2",
+    "date": "2023-04-08 12:00:00",
+    "username": "username",
+    "password": "password"
+  },
+  {
+    "name": "Venue Name 3",
+    "date": "2023-06-08 12:00:00",
+    "username": "username",
+    "password": "password"
+  }
+]

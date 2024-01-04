@@ -1,7 +1,8 @@
 {{#each events as |event| }}
 <div class="event">
-  <h2>{{event.name}}</h2>
-  <p>{{event.time}}</p>
-  <p>{{event.genre}}</p>
+  <h2>{{event.band.name}}</h2>
+  <p>{{format_date event.venue.date}}</p>
+  <p>{{event.band.genre}}</p>
+  <h2>{{event.venue.name}}</h2>
 </div>
 {{/each}}

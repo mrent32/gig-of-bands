@@ -11,18 +11,6 @@ Gigs.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    gig_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    genre: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    band_name: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
     band_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -31,12 +19,9 @@ Gigs.init(
         key: 'id',
       },
     },
-    venue_name: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
     venue_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'venues',
         key: 'id',
