@@ -1,22 +1,34 @@
-const router = require('express').Router();
-const { Bands } = require('../../models');
-const { Venues } = require('../../models')
+const router = require('express').Router()
+const { Bands, Venues } = require('../../models')
 
-router.post('/', async (req, res) => {
+router.post('/:id', async (req, res) => {
   try {
-    const bandData = await Bands.create({username: req.body.name, password: req.body.password});
-    // const venueData = await Venues.create(req.body);
-    req.session.save(() => {
-      req.session.user_id = bandData.id;
-      req.session.logged_in = true;
+    if (req.params.id == 1) {
+      const bandData = await Bands.create({name: req.body.bandName, genre: req.body.bandgenre, username: req.body.bandUsername, password: req.body.bandPassword});
+      console.log(bandData)
 
-      res.status(200).json(bandData);
-    });
+      req.session.save(() => {
+        req.session.user_id = bandData.id;
+        req.session.logged_in = true
+      })
+      
+      res.status(200).json(bandData)
+    } else {
+      const venueData = await Venues.create({name: req.body.venueName, username: req.body.venueUsername, password: req.body.venuePassword});
+      console.log(venueData)
+
+      req.session.save(() => {
+        req.session.user_id = venueData.id;
+        req.session.logged_in = true
+      })
+
+      res.status(200).json(venueData)
+    }
   } catch (err) {
-    console.log('logging out', err)
-    res.status(400).json(err);
+    res.status(400).json(err)
+    console.log(err)
   }
-});
+})
 
 router.post('/login', async (req, res) => {
   try {
