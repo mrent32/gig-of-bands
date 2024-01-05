@@ -1,0 +1,14 @@
+{{#if performers.length}}
+<div>
+  <h3>Available Bands</h3>
+
+  {{#each bands as |band|}}
+  <div>
+      <h4><a href="/bands/{{band.id}}">{{band.name}}</a></h4>
+      <p>{{band.genre}}</p>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+
+<script src="./js/band.js"></script>
