@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 
 router.get('/project/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const gigData = await Gigs.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -30,9 +30,9 @@ router.get('/project/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const project = gigData.get({ plain: true });
 
-    res.render('project', {
+    res.render('performers', {
       ...project,
       logged_in: req.session.logged_in
     });
@@ -45,15 +45,16 @@ router.get('/project/:id', async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const userData = await Bands.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Gigs }],
     });
 
-    const user = userData.get({ plain: true });
+    const band = userData.get({ plain: true });
 
     res.render('profile', {
-      ...user,
+      
+      ...band,
       logged_in: true
     });
   } catch (err) {
