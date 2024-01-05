@@ -9,21 +9,25 @@
 </head>
 
 <body>
-    <header class="">
-        <h1>GigsforBands</h1>
+    <header>
         <nav>
+        <h1>GigsforBands</h1>
         <a href="/profile">Bands</a>
         <a href="/profile">Venues</a>
         <a href="/profile">Events</a>
-        <!-- <button class="" id="logout">logout</button> -->
-        <a href="/login">login</a>
+        <div class="login-status">
+            <!-- <button class="" id="logout">logout</button> -->
+            <a href="/login">login</a>
+        </div>
         </nav>
     </header>
 
     <main>
         <div class="hero">
-            <img>
-            <h2>Hero Message</h2>
+            <div class="hero-img">
+                <img src="/images/connection2.jpg">
+            </div>
+            <h1>The connection between performers and venues</h1>
         </div>
 
         <div class="categories">
@@ -38,8 +42,8 @@
             </div>
         </div>
 
+        <h2 class="event-header">Events:</h2>
         <div class="event-list">
-            <h2>Events:</h2>
             {{{body}}}
         </div>
     </main>
