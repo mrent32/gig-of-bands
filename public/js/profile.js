@@ -1,3 +1,22 @@
+// const calendar = require('fullcalendar/core')
+import { Calendar } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import listPlugin from '@fullcalendar/list';
+
+const cal = document.getElementById('calendar')
+
+let calendar = new Calendar(calendarEl, {
+  plugins: [ dayGridPlugin, timeGridPlugin, listPlugin ],
+  initialView: 'dayGridMonth',
+  headerToolbar: {
+    left: 'prev,next today',
+    center: 'title',
+    right: 'dayGridMonth,timeGridWeek,listWeek'
+  }
+});
+cal.appendChild(calendar)
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -45,3 +64,4 @@ document
 document
   .querySelector('.project-list')
   .addEventListener('click', delButtonHandler);
+ module.exports = Calendar
