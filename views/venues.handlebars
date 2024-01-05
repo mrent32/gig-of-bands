@@ -1,15 +1,13 @@
-{{#if venues.length}}
 <div>
   <h3>Available Venues</h3>
 
   {{#each venues as |venue|}}
   <div>
       <h4><a href="/venues/{{venue.id}}">{{venue.name}}</a></h4>
-      <p>{{venue.date}}</p>
+      <p>{{format_date venue.date}}</p>
       <p>{{venue.genre}}</p>
   </div>
   {{/each}}
 </div>
-{{/if}}
 
-<script src="./js/venue.js"></script>
+{{!-- <script src="./js/venue.js"></script> --}}
