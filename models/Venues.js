@@ -26,7 +26,7 @@ class Venues extends Model {
       },
       date: {
         type: DataTypes.DATE,
-        allowNull: false
+        allowNull: true
       },
       username: {
         type: DataTypes.STRING,
