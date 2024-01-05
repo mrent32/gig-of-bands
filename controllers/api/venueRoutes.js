@@ -6,7 +6,6 @@ router.get('/', async (req, res) => {
         const venueData = await Venues.findAll({ attributes: { exclude: ['username', 'password'] } })
 
         const venues = venueData.map((venue) => venue.get({ plain: true }))
-        console.log(venues)
         
         res.render('venues', {
             venues

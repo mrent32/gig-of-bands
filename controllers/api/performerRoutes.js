@@ -6,7 +6,6 @@ router.get('/', async (req, res) => {
         const bandData = await Bands.findAll({ attributes: { exclude: ['username', 'password'] } })
 
         const bands = bandData.map((band) => band.get({ plain: true }))
-        console.log(bands)
         
         res.render('performers', {
             bands
