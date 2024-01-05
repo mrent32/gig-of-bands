@@ -2,7 +2,6 @@ const viewPage = (event) => {
     event.preventDefault()
 
     const id = event.target.id
-    console.log(id)
 
     document.location.replace(`/api/${id}`)
 }
