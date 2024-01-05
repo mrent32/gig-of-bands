@@ -1,24 +1,26 @@
 const router = require('express').Router();
 const { Bands } = require('../../models');
+const { Venues } = require('../../models')
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
-
+    const bandData = await Bands.create({username: req.body.name, password: req.body.password});
+    // const venueData = await Venues.create(req.body);
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = bandData.id;
       req.session.logged_in = true;
 
-      res.status(200).json(userData);
+      res.status(200).json(bandData);
     });
   } catch (err) {
+    console.log('logging out', err)
     res.status(400).json(err);
   }
 });
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    const userData = await Bands.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
