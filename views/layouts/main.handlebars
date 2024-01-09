@@ -12,12 +12,15 @@
     <header>
         <nav>
         <h1>GigsforBands</h1>
-        <a href="/profile">Bands</a>
-        <a href="/profile">Venues</a>
-        <a href="/profile">Events</a>
+        <a href="/api/bands">Bands</a>
+        <a href="/api/venues">Venues</a>
+        <a href="#event">Events</a>
         <div class="login-status">
+            {{#if logged_in}}
             <button class="" id="logout">logout</button>
+            {{else}}
             <a href="/login">login</a>
+            {{/if}}
         </div>
         </nav>
     </header>
@@ -27,7 +30,9 @@
     </main>
 
     <script src="/js/homepage.js"></script>
+    {{#if logged_in}}
     <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>

@@ -16,7 +16,6 @@ router.get('/', async (req, res) => {
     }
 })
 
-
 router.delete('/:id', withAuth, async (req, res) => {
     try {
         const venueData = await Venues.destroy({
@@ -24,15 +23,15 @@ router.delete('/:id', withAuth, async (req, res) => {
                 id: req.params.id,
                 user_id: req.session.user_id,
             },
-        });
+        })
         if(!venueData) {
-            res.status(404).json({ message: 'No gig found with this id!' });
-            return;
+            res.status(404).json({ message: 'No venue found with this id!' })
+            return
         }
-        res.status(200).json(venueData);
+        res.status(200).json(venueData)
         } catch (err) {
-            res.status(500).json(err);
+            res.status(500).json(err)
         }
-});
+})
 
 module.exports = router
