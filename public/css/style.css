@@ -6,22 +6,22 @@ body {
   margin: 0;
   font-family: 'Arial', sans-serif; 
   line-height: 1.6;
-  color: #333; 
-  background-color: #3490dc; /* Set background color to blue */
+  /* color: #333;  */
+  background-color: #3490dc; 
 }
 
 nav {
   display: flex;
-  background-color: #1a202c; /* Darker background color for the navigation bar */
+  background-color: #1a202c; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 50px 50px 50px; /* Add some padding to the top and bottom */
+  padding: 50px 50px 50px; 
 }
 
 nav h1 {
-  color: white; /* Set text color to white */
-  margin-right: auto; /* Push other elements to the right */
-  padding-left: 5px; /* Add some padding to the left of the h1 */
-  font-size: 60px; /* Increase font size */
+  display: flex;
+  background-color: #1a202c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px 50px 50px;
 }
 
 nav a {
@@ -36,10 +36,25 @@ nav a:hover {
   border-bottom: 2px solid #ffed4a; 
 }
 
-.login-status {
-  margin-left: auto; 
+/* h2 {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+} */
+
+.login-status {
+  margin-right: 10px;
 }
 
 .login-status button {
