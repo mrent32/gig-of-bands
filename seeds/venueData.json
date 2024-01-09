@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Broken Spoke",
+    "date": "2023-02-08 12:00:00",
+    "username": "spoke",
+    "password": "password"
+  },
+  {
+    "name": "Moody Theater",
+    "date": "2023-04-08 12:00:00",
+    "username": "moody",
+    "password": "password"
+  },
+  {
+    "name": "Hotel Vegas",
+    "date": "2023-06-08 12:00:00",
+    "username": "vegas",
+    "password": "password"
+  }
+]
