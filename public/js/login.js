@@ -1,15 +1,19 @@
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const email = document.querySelector('#email-login').value.trim();
+  const username = document.querySelector('#username-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
+  const dropbox = document.querySelector('#dropbox');
 
-  if (email && password) {
+  console.log(dropbox.value)
+  if (username && password) {
     // Send a POST request to the API endpoint
+    console.log('string')
     const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ username, password, dropbox }),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -21,7 +25,9 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
+// document
+// .querySelector('.login-form')
+// .addEventListener('submit', loginFormHandler);
 document
   .querySelector('#login-btn')
   .addEventListener('click', loginFormHandler);

@@ -1,8 +1,7 @@
-// const calendar = require('fullcalendar/core')
-import { Calendar } from '@fullcalendar/core';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import listPlugin from '@fullcalendar/list';
+const calendar = require('fullcalendar/core')
+const day = require('@fullcalendar/daygrid')
+const time = require('@fullcalendar/timegrid')
+const list = require('@fullcalendar/list')
 
 const cal = document.getElementById('calendar')
 
@@ -16,6 +15,7 @@ let calendar = new Calendar(calendarEl, {
   }
 });
 cal.appendChild(calendar)
+calendar.render()
 
 const newFormHandler = async (event) => {
   event.preventDefault();
