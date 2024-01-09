@@ -1,20 +1,20 @@
 [
   {
-    "name": "Band Name",
+    "name": "The Stolling Rones",
     "genre": "Rock",
-    "username": "username",
+    "username": "stones",
     "password": "password"
   },
   {
-    "name": "Band Name 2",
-    "genre": "Punk",
-    "username": "username",
+    "name": "Runs N' Goses",
+    "genre": "Hard Rock",
+    "username": "roses",
     "password": "password"
   },
   {
-    "name": "Band Name 3",
-    "genre": "Hip hop",
-    "username": "username",
+    "name": "Jon Bovi",
+    "genre": "Rock",
+    "username": "jovi",
     "password": "password"
   }
 ]
