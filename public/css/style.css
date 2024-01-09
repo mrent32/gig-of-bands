@@ -14,33 +14,36 @@ nav {
   display: flex;
   background-color: #1a202c; /* Darker background color for the navigation bar */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 50px 50px 50px; /* Add some padding to the top and bottom */
 }
 
 nav h1 {
   color: white; /* Set text color to white */
   margin-right: auto; /* Push other elements to the right */
-  padding-left: 10px; /* Add some padding to the left of the h1 */
+  padding-left: 5px; /* Add some padding to the left of the h1 */
+  font-size: 60px; /* Increase font size */
 }
 
 nav a {
   color: #ffffff; /* Set text color to white */
   margin-left: 15px; /* Add space between navigation links */
   text-decoration: none; /* Remove underlines from links */
+  border: 2px solid black; /* Add border to links */
+  font-size: 50px; /* Increase font size */
 }
 
 nav a:hover {
-  border-bottom: 2px solid #ffed4a; /* Add a yellow border bottom on hover */
+  border-bottom: 2px solid #ffed4a; 
 }
 
 .login-status {
-  margin-left: auto; /* Push login status to the right */
+  margin-left: auto; 
   display: flex;
   align-items: center;
 }
 
 .login-status button {
-  margin-right: 10px; /* Add space between logout button and login link */
+  margin-right: 10px; 
 }
 
 .hero {
@@ -51,18 +54,18 @@ nav a:hover {
 .hero-img {
   height: 300px;
   background-color: black;
-  overflow: hidden; /* Hide overflowing content */
+  overflow: hidden; 
 }
 
 .hero img {
   width: 100%;
   height: 300px;
   opacity: 80%;
-  transition: filter 0.3s ease; /* Smooth transition for the filter property */
+  transition: filter 0.3s ease; 
 }
 
 .hero img:hover {
-  filter: blur(5px); /* Apply a blur effect on hover */
+  filter: blur(5px); 
 }
 
 .hero h1 {
