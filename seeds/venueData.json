@@ -1,20 +1,20 @@
 [
   {
-    "name": "Venue Name",
+    "name": "Broken Spoke",
     "date": "2023-02-08 12:00:00",
-    "username": "username",
+    "username": "spoke",
     "password": "password"
   },
   {
-    "name": "Venue Name 2",
+    "name": "Moody Theater",
     "date": "2023-04-08 12:00:00",
-    "username": "username",
+    "username": "moody",
     "password": "password"
   },
   {
-    "name": "Venue Name 3",
+    "name": "Hotel Vegas",
     "date": "2023-06-08 12:00:00",
-    "username": "username",
+    "username": "vegas",
     "password": "password"
   }
 ]
