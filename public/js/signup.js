@@ -15,10 +15,11 @@ const signupFormHandler = async (event) => {
   
   const bandName = document.querySelector('#band-name-signup').value.trim()
   const bandGenre = document.querySelector('#band-genre-signup').value.trim()
-  const venueName = document.querySelector('#venue-name-signup').value.trim()
   const bandUsername = document.querySelector('#band-username-signup').value.trim()
-  const venueUsername = document.querySelector('#venue-username-signup').value.trim()
   const bandPassword = document.querySelector('#band-password-signup').value.trim()
+
+  const venueName = document.querySelector('#venue-name-signup').value.trim()
+  const venueUsername = document.querySelector('#venue-username-signup').value.trim()
   const venuePassword = document.querySelector('#venue-password-signup').value.trim()
   
   if (bandName && bandGenre && bandUsername && bandPassword) {
@@ -29,7 +30,7 @@ const signupFormHandler = async (event) => {
     })
 
     if (response.ok) {
-      document.location.replace('/')
+      document.location.replace('/profile')
     } else {
       alert(response.statusText)
     }
@@ -43,7 +44,7 @@ const signupFormHandler = async (event) => {
     })
 
     if (response.ok) {
-      document.location.replace('/')
+      document.location.replace('/profile')
     } else {
       alert(response.statusText)
     }

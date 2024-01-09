@@ -1,4 +1,3 @@
-
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -7,7 +6,6 @@ const loginFormHandler = async (event) => {
   const password = document.querySelector('#password-login').value.trim();
   const dropbox = document.querySelector('#dropbox');
 
-  console.log(dropbox.value)
   if (username && password) {
     // Send a POST request to the API endpoint
     console.log('string')
@@ -23,8 +21,11 @@ const loginFormHandler = async (event) => {
     } else {
       alert(response.statusText);
     }
+  } else {
+    alert('no credentials')
   }
 };
+
 // document
 // .querySelector('.login-form')
 // .addEventListener('submit', loginFormHandler);
