@@ -1,29 +1,33 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
+<div class="flex items-center justify-center h-screen">
+  <div class="bg-gray-800 p-8 max-w-md w-full border border-black">
+    <h2 class="text-2xl font-bold mb-4 text-white text-center">Login</h2>
 
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Username:</label>
+    <form class="form login-form bg-gray-700 p-6 rounded">
+      <div class="mb-4">
+        <label for="email-login" class="block text-sm font-medium text-white">Username:</label>
         <input class="form-input" type="text" id="email-login" />
       </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
+      <div class="mb-4">
+        <label for="password-login" class="block text-sm font-medium text-white">Password:</label>
         <input class="form-input" type="password" id="password-login" />
       </div>
-      <div class="form-group">
-        <label>Account Type:</label>
-        <select>
+      <div class="mb-4">
+        <label class="block text-sm font-medium text-white">Account Type:</label>
+        <select class="form-select">
           <option value="band">Band</option>
           <option value="venue">Venue</option>
         </select>
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit" id="login-btn">login</button>
+      <div class="mb-6">
+        <button class="bg-gray-300 text-gray-800 py-2 px-4 rounded border border-gray-400 w-full" type="submit" id="login-btn">Login</button>
       </div>
     </form>
-    <a href="/signup">Sign up instead</a>
+
+    <a href="/signup" class="text-blue-500 text-center">Sign up instead</a>
   </div>
 </div>
 
 <script src="./js/login.js"></script>
+
+
+
