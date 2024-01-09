@@ -1,38 +1,11 @@
 const router = require('express').Router()
 const { Bands, Venues } = require('../../models')
 
-router.post('/:id', async (req, res) => {
-  try {
-    if (req.params.id == 1) {
-      const bandData = await Bands.create({name: req.body.bandName, genre: req.body.bandgenre, username: req.body.bandUsername, password: req.body.bandPassword});
-      console.log(bandData)
-
-      req.session.save(() => {
-        req.session.user_id = bandData.id;
-        req.session.logged_in = true
-      })
-      
-      res.status(200).json(bandData)
-    } else {
-      const venueData = await Venues.create({name: req.body.venueName, username: req.body.venueUsername, password: req.body.venuePassword});
-      console.log(venueData)
-
-      req.session.save(() => {
-        req.session.user_id = venueData.id;
-        req.session.logged_in = true
-      })
-
-      res.status(200).json(venueData)
-    }
-  } catch (err) {
-    res.status(400).json(err)
-    console.log(err)
-  }
-})
-
 router.post('/login', async (req, res) => {
   try {
-    const userData = await Bands.findOne({ where: { username: req.body.name } });
+    console.log(req.body)
+    const userData = await Bands.findOne({ where: { username: req.body.email } });
+    console.log(userData)
 
     if (!userData) {
       res
@@ -56,20 +29,49 @@ router.post('/login', async (req, res) => {
       
       res.json({ user: userData, message: 'You are now logged in!' });
     });
-
+    
   } catch (err) {
     res.status(400).json(err);
+    console.log(err)
   }
 });
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
-      res.status(204).end();
-    });
+      res.status(204).end()
+    })
   } else {
-    res.status(404).end();
+    res.status(404).end()
   }
-});
+})
+
+router.post('/:id', async (req, res) => {
+  try {
+    if (req.params.id == 1) {
+      const bandData = await Bands.create({name: req.body.bandName, genre: req.body.bandgenre, username: req.body.bandUsername, password: req.body.bandPassword});
+      
+      req.session.save(() => {
+        req.session.user_id = bandData.id;
+        req.session.logged_in = true
+      })
+      
+      res.status(200).json(bandData)
+    } else if (req.params.id == 2) {
+      const venueData = await Venues.create({name: req.body.venueName, username: req.body.venueUsername, password: req.body.venuePassword});
+      console.log(venueData)
+
+      req.session.save(() => {
+        req.session.user_id = venueData.id;
+        req.session.logged_in = true
+      })
+
+      res.status(200).json(venueData)
+    }
+  } catch (err) {
+    res.status(400).json(err)
+    console.log(err)
+  }
+})
 
 module.exports = router;

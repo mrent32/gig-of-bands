@@ -9,10 +9,10 @@ router.get('/', async (req, res) => {
     })
 
     const events = gigData.map((gig) => gig.get({ plain: true }))
-    console.log(events)
 
     res.render('homepage', { 
-      events
+      events,
+      logged_in: req.session.logged_in
     })
   } catch (err) {
     res.status(500).json(err)
