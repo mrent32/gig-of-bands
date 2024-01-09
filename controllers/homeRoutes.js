@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Gigs, Bands, Venues } = require('../models');
 const withAuth = require('../utils/auth');
+const calendar = require('../utils/calendar')
 
 router.get('/', async (req, res) => {
   try {
@@ -43,6 +44,7 @@ router.get('/project/:id', async (req, res) => {
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
+  console.log(calendar)
   try {
     console.log("user id", req.session.user_id)
     // Find the logged in user based on the session ID
