@@ -4,6 +4,7 @@ const withAuth = require('../../utils/auth')
 
 router.get('/', async (req, res) => {
     try {
+        console.log('started')
         const bandData = await Bands.findAll({ attributes: { exclude: ['username', 'password'] } })
 
         const bands = bandData.map((band) => band.get({ plain: true }))
