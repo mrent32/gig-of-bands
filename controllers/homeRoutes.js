@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Gigs, Bands, Venues } = require('../models');
 const withAuth = require('../utils/auth');
-const calendar = require('../utils/calendar')
 
 router.get('/', async (req, res) => {
   try {
