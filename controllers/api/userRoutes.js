@@ -52,7 +52,7 @@ router.post('/logout', (req, res) => {
 router.post('/:id', async (req, res) => {
   try {
     // creates a band account if the request is sent to the 1 (band) endpoint
-    if (req.params.id == 1 && !bandData && !venueData) {
+    if (req.params.id == 1) {
       const bandData = await Bands.create({name: req.body.bandName, genre: req.body.bandGenre, username: req.body.bandUsername, password: req.body.bandPassword});
       
       req.session.save(() => {
@@ -62,7 +62,7 @@ router.post('/:id', async (req, res) => {
       })
 
     // creates a venue account if the request is sent to the 2 (venue) endpoint
-    } else if (req.params.id == 2 && !bandData && !venueData) {
+    } else if (req.params.id == 2) {
       const venueData = await Venues.create({name: req.body.venueName, username: req.body.venueUsername, password: req.body.venuePassword})
 
       req.session.save(() => {
