@@ -4,20 +4,20 @@
 
     <form class="form login-form bg-gray-700 p-6 rounded">
       <div class="mb-4">
-        <label for="email-login" class="block text-sm font-medium text-white">Username:</label>
+        <label for="email-login" class="block text-md font-medium text-white">Username:</label>
         <input class="form-input" type="text" id="username-login" />
       </div>
       <div class="mb-4">
-        <label for="password-login" class="block text-sm font-medium text-white">Password:</label>
+        <label for="password-login" class="block text-md font-medium text-white">Password:</label>
         <input class="form-input" type="password" id="password-login" />
       </div>
       <div class="mb-2 form-group">
-        <label>Account Type:</label>
-        <select id="dropbox">
-          <option value="band">Performer</option>
-          <option value="venue">Venue</option>
-        </select>
-      </div>
+  <label for="dropbox" class="text-white font-semi-bold">Account Type:</label>
+  <select id="dropbox" class="text-black">
+    <option value="band">Performer</option>
+    <option value="venue">Venue</option>
+  </select>
+</div>
      <div class="mb-6">
   <button class="bg-gray-300 text-gray-800 py-2 px-4 rounded border border-gray-400 w-full transform transition-transform hover:scale-105 active:scale-100" type="submit" id="login-btn">Login</button>
 </div>
