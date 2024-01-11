@@ -33,13 +33,51 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       
-      ...band,
+      band,
       logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+router.get('/bandprofile/:id', async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await Bands.findByPk(req.params.id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Gigs }],
+    })
+
+    const band = userData.get({ plain: true })
+
+    res.render('profile', {
+      
+      band
+    })
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+
+router.get('/venueprofile/:id', async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await Venues.findByPk(req.params.id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Gigs }],
+    })
+
+    const venue = userData.get({ plain: true })
+
+    res.render('profile', {
+      
+      venue
+    })
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
