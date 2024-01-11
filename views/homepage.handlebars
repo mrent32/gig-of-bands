@@ -17,17 +17,8 @@
   </div>
 </div>
 
-<h2 class="event-header" id="event">Events:</h2>
-<div class="event-list">
-  {{#each events as |event| }}
-  <div class="event">
-    <h2>{{event.band.name}}</h2>
-    <p>{{format_date event.venue.date}}</p>
-    <p>{{event.band.genre}}</p>
-    <h2>{{event.venue.name}}</h2>
-  </div>
-  {{/each}}
-</div>
+<h2 class="event-header" id="event">Upcoming Events</h2>
+
 <div id="calendar2" style="max-width: 1000px; margin:0 auto"></div>
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
 <script src="../public/js/homepage.js" ></script>
