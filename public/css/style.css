@@ -79,8 +79,12 @@ form {
   transition: filter 0.3s ease; 
 }
 
-.hero img:hover {
-  filter: blur(5px); 
+#homepage_performers img:hover {
+  filter: blur(2px); 
+}
+
+#homepage_venue img:hover {
+  filter: blur(2px); 
 }
 
 .hero h1 {
