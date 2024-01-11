@@ -2,13 +2,13 @@
   <div class="bg-gray-800 p-8 max-w-md w-full border border-black">
     <h2 class="text-2xl font-bold mb-4 text-white text-center">Signup</h2>
 
-   <button class="signup-btn bg-blue-500 text-white font-bold py-2 px-4 rounded-full mb-4 mx-auto ml-6 focus:outline-none focus:shadow-outline-blue" id="performer-signup-btn">Performer Signup</button>
-    <button class="signup-btn bg-green-500 text-white font-bold py-2 px-4 rounded-full mb-4 mx-auto ml-4 focus:outline-none focus:shadow-outline-green" id="venue-signup-btn">Venue Signup</button>
-
+    <button class="signup-btn bg-blue-500 text-white font-bold py-2 px-4 rounded-full mb-4 mx-auto ml-6 focus:outline-none focus:shadow-outline-blue transform transition-transform hover:scale-105 active:scale-100" id="performer-signup-btn">Performer Signup</button>
+    
+    <button class="signup-btn bg-green-500 text-white font-bold py-2 px-4 rounded-full mb-4 mx-auto ml-4 focus:outline-none focus:shadow-outline-green transform transition-transform hover:scale-105 active:scale-100" id="venue-signup-btn">Venue Signup</button>
 
     <form class="form signup-form hidden" id="band">
       <div class="mb-4">
-        <label for="band-name-signup" class="block text-sm font-medium text-white">Performer Name:</label>
+        <label for="band-name-signup" class="block text-sm font-medium text-white">Band Name:</label>
         <input class="form-input" type="text" id="band-name-signup" />
       </div>
       <div class="mb-4">
@@ -23,8 +23,8 @@
         <label for="band-password-signup" class="block text-sm font-medium text-white">Password:</label>
         <input class="form-input" type="password" id="band-password-signup" />
       </div>
-      <div class="mb-4">
-        <button class="btn btn-primary submit-btn" type="submit">Signup</button>
+      <div class="mb-4 text-center">
+        <button class="btn btn-primary submit-btn bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-gray" type="submit">Signup</button>
       </div>
     </form>
 
@@ -41,11 +41,12 @@
         <label for="venue-password-signup" class="block text-sm font-medium text-white">Password:</label>
         <input class="form-input" type="password" id="venue-password-signup" />
       </div>
-      <div class="mb-4">
-        <button class="btn btn-primary submit-btn" type="submit">Signup</button>
+       <div class="mb-4 text-center">
+        <button class="btn btn-primary submit-btn bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-gray" type="submit">Signup</button>
       </div>
     </form>
   </div>
 </div>
 
 <script src="./js/signup.js"></script>
+
