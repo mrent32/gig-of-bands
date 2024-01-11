@@ -10,7 +10,7 @@ body {
   background-color: #3490dc; 
 }
 
-nav {
+/* nav {
   display: flex;
   background-color: #1a202c; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -26,15 +26,15 @@ nav h1 {
 
 nav a {
   color: #ffffff; /* Set text color to white */
-  margin-left: 15px; /* Add space between navigation links */
-  text-decoration: none; /* Remove underlines from links */
-  border: 2px solid black; /* Add border to links */
-  font-size: 50px; /* Increase font size */
-}
+  /* margin-left: 15px; 
+  text-decoration: none; 
+  border: 2px solid black; 
+  font-size: 50px; 
+} */
 
-nav a:hover {
+/* nav a:hover {
   border-bottom: 2px solid #ffed4a; 
-}
+} */ 
 
 /* h2 {
   display: flex;
