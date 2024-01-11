@@ -1,6 +1,7 @@
 const formDisplay = (event) => {
   const id = event.target.id
 
+  // displays the form depending on which button is selected
   if (id === 'performer-signup-btn') {
     document.getElementById('venue').style.display = 'none'
     document.getElementById('band').style.display = 'block'
@@ -22,6 +23,7 @@ const signupFormHandler = async (event) => {
   const venueUsername = document.querySelector('#venue-username-signup').value.trim()
   const venuePassword = document.querySelector('#venue-password-signup').value.trim()
   
+  // sends the request to the endpoint for creating a band
   if (bandName && bandGenre && bandUsername && bandPassword) {
     const response = await fetch('/api/users/1', {
       method: 'POST',
@@ -36,6 +38,7 @@ const signupFormHandler = async (event) => {
     }
   }
 
+  // sends the request to the endpoint for creating a venue
   if (venueName && venueUsername && venuePassword) {
     const response = await fetch('/api/users/2', {
       method: 'POST',
@@ -51,10 +54,12 @@ const signupFormHandler = async (event) => {
   }
 }
 
+// adds event listeners to decide which form is displayed
 [...document.querySelectorAll('.signup-btn')]
-  .forEach(button => button
+.forEach(button => button
   .addEventListener('click', formDisplay));
-
+  
+  // adds event listeners to both signup buttons
 [...document.querySelectorAll('.submit-btn')]
   .forEach(button => button
   .addEventListener('click', signupFormHandler));
