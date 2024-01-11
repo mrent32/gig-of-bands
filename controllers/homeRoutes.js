@@ -52,8 +52,8 @@ router.get('/bandprofile/:id', async (req, res) => {
     const band = userData.get({ plain: true })
 
     res.render('profile', {
-      
-      band
+      band,
+      logged_in: req.session.logged_in
     })
   } catch (err) {
     res.status(500).json(err)
@@ -71,8 +71,8 @@ router.get('/venueprofile/:id', async (req, res) => {
     const venue = userData.get({ plain: true })
 
     res.render('profile', {
-      
-      venue
+      venue,
+      logged_in: req.session.logged_in
     })
   } catch (err) {
     res.status(500).json(err)
