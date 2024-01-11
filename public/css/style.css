@@ -137,3 +137,24 @@ form {
 .hidden {
   display: none;
 }
+
+#performers {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#venues {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#performers-title,
+#venues-title {
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
