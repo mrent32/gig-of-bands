@@ -29,7 +29,7 @@ let calendar = new FullCalendar.Calendar(cal, {
     {
         title: `Crimson Tide live at 
         Whispering Woods`,
-        start: '2024-01-12'
+        start: '2024-02-8'
     },
     {
         title: `The Stolling Rones live at 
@@ -39,7 +39,7 @@ let calendar = new FullCalendar.Calendar(cal, {
     {
         title: `Pysychadelica live at
          Whirlwind Hall!`,
-        start: '2024-01-14'
+        start: '2024-01-26'
     },
     {
         title: `Epic Explorers live 
@@ -54,17 +54,17 @@ let calendar = new FullCalendar.Calendar(cal, {
     {
         title: `Radiant Rebels live at 
         Majestic Ballrom!`,
-        start: '2024-01-17'
+        start: '2024-02-05'
     },
     {
         title: `Lunar Lullabies live
          at Harmony Haven!`,
-        start: '2024-01-19'
+        start: '2024-01-28'
     },
     {
         title: `Sonic Boom live 
         at Crystal Palace!`,
-        start: '2024-01-18'
+        start: '2024-01-31'
     },
     {
         title: `Eclipse Enigma live
@@ -74,12 +74,20 @@ let calendar = new FullCalendar.Calendar(cal, {
     {
         title: `Mystic Melodies live at 
         Vivid Vista Lounge!`,
-        start: '2024-01-21'
+        start: '2024-01-29'
     },
     {
         title: `Electric Echoes live 
         at Ethereal Oasis!`,
         start: '2024-01-22'
+    },
+    {
+        title: `Technotronic Titans live at Celestial Dome!`,
+        start: '2024-02-09'
+    },
+    {
+        title: `Runs And Goses live at gotel Vegas`,
+        start: '2024-02-03'
     },
 
   ]
