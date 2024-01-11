@@ -1,4 +1,3 @@
-// 
 const viewPage = (event) => {
     event.preventDefault()
 
