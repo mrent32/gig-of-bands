@@ -2,20 +2,18 @@ const router = require('express').Router();
 const { Gigs, Bands, Venues } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.get('/gigs', async (req, res) => {
     try {
-        const newGig = await Gigs.create({
-            ...req.body,
-            user_id: req.session.user_id,
+        const allGigs = await Gigs.findAll({ include: ({ model: Bands, Venues })
         });
         
-        res.status(200).json(newGig);
+        res.status(200).json(allGigs);
     } catch(err) {
         res.status(400).json(err)
     }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const gigData = await Gigs.destroy({
             where: {

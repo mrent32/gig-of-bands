@@ -1,12 +1,6 @@
-const calendar = require('fullcalendar/core')
-const day = require('@fullcalendar/daygrid')
-const time = require('@fullcalendar/timegrid')
-const list = require('@fullcalendar/list')
-
 const cal = document.getElementById('calendar')
 
-let calendar = new Calendar(calendarEl, {
-  plugins: [ dayGridPlugin, timeGridPlugin, listPlugin ],
+let calendar = new FullCalendar.Calendar(cal, {
   initialView: 'dayGridMonth',
   headerToolbar: {
     left: 'prev,next today',
@@ -14,7 +8,6 @@ let calendar = new Calendar(calendarEl, {
     right: 'dayGridMonth,timeGridWeek,listWeek'
   }
 });
-cal.appendChild(calendar)
 calendar.render()
 
 const newFormHandler = async (event) => {
