@@ -4,8 +4,8 @@ const loginFormHandler = async (event) => {
   // Collect values from the login form
   const username = document.querySelector('#username-login').value.trim()
   const password = document.querySelector('#password-login').value.trim()
-  const dropbox = document.querySelector('#dropbox')
-  console.log(dropbox)
+  const dropboxEl = document.querySelector('#dropbox')
+  const dropbox = dropboxEl.options[dropboxEl.selectedIndex].value
 
   if (username && password) {
     // Send a POST request to the API endpoint

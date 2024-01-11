@@ -3,7 +3,6 @@ const { Bands, Venues } = require('../../models');
 
 router.post('/login', async (req, res) => {
   try {
-    console.log(req.body)
     let userData 
     if(req.body.dropbox == 'band') {
       userData = await Bands.findOne({ where: { username: req.body.username } });
