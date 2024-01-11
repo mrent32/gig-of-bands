@@ -27,11 +27,11 @@
                     <a href="/#event" class="text-xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">Events</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0">
-                    <div class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-yellow-300 hover:border-transparent hover:text-yellow-300 hover:bg-white mt-4 lg:mt-0">
+                    <div>
                         {{#if logged_in}}
-                        <button class="" id="logout">Logout</button>
+                        <button class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-yellow-300 hover:border-transparent hover:text-yellow-300 hover:bg-white mt-4 lg:mt-0" id="logout">Logout</button>
                         {{else}}
-                        <a href="/login">Login</a>
+                        <a href="/login" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-yellow-300 hover:border-transparent hover:text-yellow-300 hover:bg-white mt-4 lg:mt-0">Login</a>
                         {{/if}}
                     </div>
                 </li>
