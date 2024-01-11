@@ -1,0 +1,31 @@
+<div class="flex items-center justify-center h-screen">
+  <div class="bg-gray-800 p-8 max-w-md w-full border border-black">
+    <h2 class="text-2xl font-bold mb-4 text-white text-center">Login</h2>
+
+    <form class="form login-form bg-gray-700 p-6 rounded flex flex-col items-center">
+  <div class="mb-4">
+    <label for="email-login" class="block text-md font-medium text-white">Username:</label>
+    <input class="form-input" type="text" id="username-login" />
+  </div>
+  <div class="mb-4">
+    <label for="password-login" class="block text-md font-medium text-white">Password:</label>
+    <input class="form-input" type="password" id="password-login" />
+  </div>
+  <div class="mb-2 form-group">
+    <label for="dropbox" class="text-white font-semi-bold">Account Type:</label>
+    <select id="dropbox" class="text-black">
+      <option value="band">Performer</option>
+      <option value="venue">Venue</option>
+    </select>
+  </div>
+</form>
+     <div class="mb-6">
+  <button class="bg-gray-300 text-gray-800 py-1 px-4 rounded border border-gray-400 w-full transform transition-transform hover:scale-105 active:scale-100" type="submit" id="login-btn">Login</button>
+</div>
+    </form>
+    
+     <div class="mb-4 text-center">
+      <a href="/signup" class="signup-btn bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline-gray">Sign up instead</a>
+    </div>
+
+<script src="./js/login.js"></script>

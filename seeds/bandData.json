@@ -1,0 +1,141 @@
+[
+  {
+    "name": "The Stolling Rones",
+    "genre": "Rock",
+    "username": "stones",
+    "password": "password"
+  },
+  {
+    "name": "Runs N' Goses",
+    "genre": "Hard Rock",
+    "username": "roses",
+    "password": "password"
+  },
+  {
+    "name": "Jon Bovi",
+    "genre": "Rock",
+    "username": "jovi",
+    "password": "password"
+  },
+  {
+    "name": "Electric Echoes",
+    "genre": "Alternative",
+    "username": "echoes",
+    "password": "password123"
+  },
+  {
+    "name": "Crimson Tide",
+    "genre": "Metal",
+    "username": "crimson",
+    "password": "pass123"
+  },
+  {
+    "name": "Sonic Bloom",
+    "genre": "Indie Rock",
+    "username": "bloom",
+    "password": "music456"
+  },
+  {
+    "name": "The Velvet Groove",
+    "genre": "Funk",
+    "username": "velvet",
+    "password": "funky321"
+  },
+  {
+    "name": "Neon Nightscape",
+    "genre": "Synthwave",
+    "username": "neon",
+    "password": "wave789"
+  },
+  {
+    "name": "Eclipse Enigma",
+    "genre": "Progressive Metal",
+    "username": "eclipse",
+    "password": "metal567"
+  },
+  {
+    "name": "Mystic Melodies",
+    "genre": "Psychedelic",
+    "username": "mystic",
+    "password": "trippy987"
+  },
+  {
+    "name": "Radiant Rebels",
+    "genre": "Pop Punk",
+    "username": "radiant",
+    "password": "punk654"
+  },
+  {
+    "name": "Lunar Lullabies",
+    "genre": "Dream Pop",
+    "username": "lunar",
+    "password": "dreamy234"
+  },
+  {
+    "name": "Retro Resonance",
+    "genre": "80s Revival",
+    "username": "retro",
+    "password": "revival123"
+  },
+  {
+    "name": "Galactic Groovers",
+    "genre": "Funk",
+    "username": "groovers",
+    "password": "funky987"
+  },
+  {
+    "name": "Epic Explorers",
+    "genre": "Progressive Rock",
+    "username": "explorers",
+    "password": "epic123"
+  },
+  {
+    "name": "Mystical Strings",
+    "genre": "World Music",
+    "username": "strings",
+    "password": "mystic456"
+  },
+  {
+    "name": "Technotronic Titans",
+    "genre": "Electronic",
+    "username": "titans",
+    "password": "techno789"
+  },
+  {
+    "name": "Harmonic Hues",
+    "genre": "Experimental",
+    "username": "hues",
+    "password": "harmony321"
+  },
+  {
+    "name": "Lunar Legends",
+    "genre": "Space Rock",
+    "username": "legends",
+    "password": "lunar654"
+  },
+  {
+    "name": "Vibrant Voices",
+    "genre": "A Capella",
+    "username": "voices",
+    "password": "harmony987"
+  },
+  {
+    "name": "Cerulean Symphony",
+    "genre": "Classical Fusion",
+    "username": "cerulean",
+    "password": "symphony123"
+  },
+  {
+    "name": "Pulse Pursuers",
+    "genre": "EDM",
+    "username": "pulse",
+    "password": "rhythm456"
+  },
+  {
+    "name": "Sunset Serenaders",
+    "genre": "Jazz",
+    "username": "serenaders",
+    "password": "sunset789"
+  }
+  
+]

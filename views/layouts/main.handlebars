@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigs for Bands</title>
+    <link rel="icon" type="image/x-icon" href="/images/guitarfavicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-#3490dc font-serif font-bold">
+        <nav class="p-5 shadow md:flex md:items-center md:justify-between mx-auto">
+            <a href="/" id="home-btn" class="text-3xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">GigsforBands</a>
+            {{!-- <div class="text-3xl cursor-pointer md:hidden block top-[-400px] transition-all ease-in duration-500">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div> --}}
+            <ul class="hidden md:flex space-x-4 flex md:flex-row flex-col items-center">
+                <li class="my-6 md:my-0">
+                    <a href="/api/performers" class="text-xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">Performers</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="/api/venues" class="text-xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">Venues</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="/#event" class="text-xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">Events</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a href="/profile" class="text-xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">My Profile</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <div>
+                        {{#if logged_in}}
+                        <button class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-yellow-300 hover:border-transparent hover:text-yellow-300 hover:bg-white mt-4 lg:mt-0" id="logout">Logout</button>
+                        {{else}}
+                        <a href="/login" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-yellow-300 hover:border-transparent hover:text-yellow-300 hover:bg-white mt-4 lg:mt-0">Login</a>
+                        {{/if}}
+                    </div>
+                </li>
+            </ul>
+
+                <div class="md:hidden" style="float: right;">
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-btn" class="text-black">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                    <!-- Mobile menu -->
+                    <div id="mobile-menu" class=" z-10 hidden absolute top-16 right-4 bg-blue-500 p-4 space-y-4">
+                        <a href="/api/performers" class="text-xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">Performers</a>
+                        <a href="/api/venues" class="text-xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">Venues</a>
+                        <a href="/#events" class="text-xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">Events</a>
+                        <a href="" class="text-xl hover:text-yellow-300 hover:underline decoration-sky-500 duration-500">Login</a>
+                    </div>
+        </nav>
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+    <script>
+        
+        // Toggle mobile menu visibility
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/js/homepage.js"></script>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
+</html>

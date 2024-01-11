@@ -1,0 +1,14 @@
+<div class="mt-8">
+  <h3 class="text-4xl font-bold text-center mb-4">Available Venues</h3>
+
+  <div class="grid max-w-screen-lg mx-auto grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
+    {{#each venues as |venue|}}
+      <div class="bg-white p-4 rounded shadow mb-4 text-center">
+        <h4 class="text-lg"><a href="/venueprofile/{{venue.id}}" class="text-blue-500 hover:underline">{{venue.name}}</a></h4>
+        <p class="text-gray-600 text-lg font-bold">{{venue.genre}}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+{{!-- <script src="./js/venue.js"></script> --}}
