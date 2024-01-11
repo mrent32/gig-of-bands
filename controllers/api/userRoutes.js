@@ -1,10 +1,8 @@
 const router = require('express').Router()
 const { Bands, Venues } = require('../../models');
-const withAuth = require('../../utils/auth');
 
 router.post('/login', async (req, res) => {
   try {
-    console.log(req.body)
     let userData 
     if(req.body.dropbox == 'band') {
       userData = await Bands.findOne({ where: { username: req.body.username } });
@@ -53,7 +51,8 @@ router.post('/logout', (req, res) => {
 
 router.post('/:id', async (req, res) => {
   try {
-    if (req.params.id == 1) {
+    // creates a band account if the request is sent to the 1 (band) endpoint
+    if (req.params.id == 1 && !bandData && !venueData) {
       const bandData = await Bands.create({name: req.body.bandName, genre: req.body.bandGenre, username: req.body.bandUsername, password: req.body.bandPassword});
       
       req.session.save(() => {
@@ -61,9 +60,10 @@ router.post('/:id', async (req, res) => {
         req.session.logged_in = true
         res.status(200).json(bandData)
       })
-    } else if (req.params.id == 2) {
-      const venueData = await Venues.create({name: req.body.venueName, username: req.body.venueUsername, password: req.body.venuePassword});
-      console.log(venueData)
+
+    // creates a venue account if the request is sent to the 2 (venue) endpoint
+    } else if (req.params.id == 2 && !bandData && !venueData) {
+      const venueData = await Venues.create({name: req.body.venueName, username: req.body.venueUsername, password: req.body.venuePassword})
 
       req.session.save(() => {
         req.session.user_id = venueData.id;
@@ -71,6 +71,7 @@ router.post('/:id', async (req, res) => {
         res.status(200).json(venueData)
       })
     }
+
   } catch (err) {
     res.status(400).json(err)
     console.log(err)
